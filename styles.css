@@ -93,16 +93,16 @@ body {
   margin: 4px 0 10px;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
     system-ui, "Segoe UI", Roboto, Arial;
-  font-size: clamp(28px, 3.8vw, 44px);
-  font-weight: 750;
-  letter-spacing: -0.6px;
+  font-size: clamp(32px, 4.2vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
   line-height: 1.02;
   display: inline-block;
 }
 
 /* Base text: clean white */
 .wm-base {
-  color: rgba(255,255,255,0.92);
+  color: rgba(255,255,255,0.88);
 }
 
 /* Gold glow overlay: subtle + premium */
@@ -155,7 +155,7 @@ body {
   font-size: 16px;
   line-height: 1.55;
   margin: 0 auto;
-  max-width: 64ch;
+  max-width: 60ch;
   color: rgba(255,255,255,0.72);
 }
 
@@ -163,6 +163,14 @@ body {
   margin: 12px 0 0;
   font-size: 14px;
   color: rgba(255,255,255,0.78);
+}
+
+.grounding {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.62);
+  font-style: italic;
+  letter-spacing: 0.2px;
 }
 
 .reveal {
@@ -210,8 +218,8 @@ body {
   font-weight: 650;
   color: rgba(255,255,255,0.92);
   background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(230,168,33,0.35);
-  box-shadow: 0 12px 34px rgba(0,0,0,0.5);
+  border: 1px solid rgba(230,168,33,0.28);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
   position: relative;
   overflow: hidden;
   animation: chipBreathe 7s ease-in-out 1.4s infinite;
@@ -314,7 +322,7 @@ body {
 
 .footer {
   position: absolute;
-  bottom: max(16px, env(safe-area-inset-bottom));
+  bottom: max(12px, env(safe-area-inset-bottom));
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -325,8 +333,29 @@ body {
 .footer p {
   margin: 0;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.45);
   font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.logo-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(230,168,33,0.12) 0%, transparent 70%);
+  filter: blur(40px);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+  animation: logoGlowDrift 24s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlowDrift {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  100% { transform: translate(-48%, -52%) scale(1.05); }
 }
 
 @media (min-width: 640px) {
@@ -338,11 +367,16 @@ body {
 
   .desc {
     font-size: 16.5px;
-    line-height: 1.58;
+    line-height: 1.55;
+    max-width: 62ch;
   }
 
   .tagline {
     font-size: 14.5px;
+  }
+
+  .grounding {
+    font-size: 13.5px;
   }
 }
 
