@@ -4,11 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="dark" />
-    <title>imamah — Connecting Communities, Building Unity</title>
-    <meta name="description" content="A simple platform bringing masjids, organizations, and people together. Real community coordination for the Ummah." />
-    <meta name="theme-color" content="#000000">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="imamah">
+    <title>imamah — Launching December 31, 2026</title>
+    <meta name="description" content="A unified platform for the Ummah. Launching December 31, 2026." />
+    
+    <!-- iOS Home Screen App Name -->
+    <meta name="apple-mobile-web-app-title" content="imamah">
+    
+    <!-- Enable standalone app mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- Status bar style (optional, premium) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -16,135 +22,60 @@
     <script src="./app.js" defer></script>
   </head>
   <body>
-    <div class="bg"></div>
-    
-    <main class="container">
-      <!-- HERO SECTION -->
+    <main class="page">
       <section class="hero">
-        <img src="./assets/imamah-logo.png" class="logo" alt="imamah">
-        
-        <h1 class="brand-name">imamah</h1>
-        
-        <p class="tagline">
-          Bringing our communities together—one connection at a time.
+        <svg class="logo-wave" viewBox="0 0 600 600" aria-label="imamah">
+          <defs>
+            <filter id="wave">
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.008 0.02"
+                numOctaves="1"
+                seed="2"
+              >
+                <animate
+                  attributeName="baseFrequency"
+                  dur="18s"
+                  values="0.008 0.02; 0.01 0.025; 0.008 0.02"
+                  repeatCount="indefinite"
+                />
+              </feTurbulence>
+              <feDisplacementMap
+                in="SourceGraphic"
+                scale="4"
+              />
+            </filter>
+          </defs>
+          <image
+            href="./assets/imamah-logo.png"
+            width="100%"
+            height="100%"
+            filter="url(#wave)"
+          />
+        </svg>
+
+        <h1 class="brand-wordmark reveal" style="--d: 0ms;" aria-label="imamah">
+          <span class="wm-base">imamah</span>
+          <span class="wm-glow" aria-hidden="true">imamah</span>
+        </h1>
+
+        <p class="desc reveal" style="--d: 90ms;">
+          A unified platform for the Ummah — bringing together masjids, organizations, and individuals through community events, shared services, and trusted guidance.
         </p>
-        
-        <div class="launch-status">
-          <span class="status-dot"></span>
-          Coming December 2026
-        </div>
-      </section>
 
-      <!-- THE PROBLEM -->
-      <section class="content-card">
-        <h2>The Reality We See</h2>
-        <p>
-          Our masjids are doing amazing work, but we're often disconnected from each other. 
-          Events get missed, youth programs overlap, and families struggle to find what they need. 
-          We're building bridges where gaps exist.
+        <p class="tagline reveal" style="--d: 170ms;">
+          Thoughtfully designed. Community-driven.
         </p>
-      </section>
 
-      <!-- WHAT WE'RE BUILDING -->
-      <section class="content-card">
-        <h2>What We're Creating</h2>
-        <p>
-          Think of imamah as a simple digital hub where your masjid can share events, 
-          coordinate with other organizations, and help community members find what they need— 
-          all in one place. No complexity, just connection.
-        </p>
-      </section>
-
-      <!-- WHO IT'S FOR -->
-      <section class="audience-section">
-        <h2>Built For Our Community</h2>
-        
-        <div class="audience-grid">
-          <div class="audience-card">
-            <div class="card-icon">🕌</div>
-            <h3>Masjids</h3>
-            <p>Share events, coordinate programs, reach more families in your area.</p>
-          </div>
-          
-          <div class="audience-card">
-            <div class="card-icon">🤝</div>
-            <h3>Organizations</h3>
-            <p>Work together with other groups, avoid overlaps, serve more people.</p>
-          </div>
-          
-          <div class="audience-card">
-            <div class="card-icon">👥</div>
-            <h3>Individuals</h3>
-            <p>Find local events, connect with services, discover what's happening near you.</p>
-          </div>
+        <div class="launch-chip reveal" style="--d: 250ms;" role="status" aria-label="Launching date">
+          <span class="launch-dot" aria-hidden="true"></span>
+          <span class="launch-text">Launching December 31, 2026</span>
         </div>
       </section>
-
-      <!-- OUR APPROACH -->
-      <section class="content-card">
-        <h2>How We're Doing This</h2>
-        <div class="approach-list">
-          <div class="approach-item">
-            <span class="check">✓</span>
-            <div>
-              <strong>Starting in Washington</strong>
-              <p>Beginning with communities we know and understand.</p>
-            </div>
-          </div>
-          <div class="approach-item">
-            <span class="check">✓</span>
-            <div>
-              <strong>Simple by Design</strong>
-              <p>No complicated features—just what communities actually need.</p>
-            </div>
-          </div>
-          <div class="approach-item">
-            <span class="check">✓</span>
-            <div>
-              <strong>Community-Driven</strong>
-              <p>Built with input from masjid leaders and community members.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TIMELINE -->
-      <section class="content-card">
-        <h2>What's Happening Now</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="time">Current</div>
-            <div class="event">Talking with masjid leaders and community organizations</div>
-          </div>
-          <div class="timeline-item">
-            <div class="time">2026</div>
-            <div class="event">Beta testing with select Washington communities</div>
-          </div>
-          <div class="timeline-item">
-            <div class="time">December 2026</div>
-            <div class="event">Public launch</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- GET INVOLVED -->
-      <section class="content-card">
-        <h2>Join the Conversation</h2>
-        <p>
-          We're currently meeting with masjid leaders, youth program directors, and community organizers 
-          across Washington State. If your organization would like to be part of the early conversations, 
-          we'd love to connect.
-        </p>
-        <div class="contact-note">
-          This isn't about signing up for a mailing list—it's about building something together, 
-          with real input from the communities we serve.
-        </div>
-      </section>
-
-      <!-- FOOTER -->
-      <footer class="footer">
-        <p>© 2026 imamah. Built with intention, for community.</p>
-      </footer>
     </main>
+
+    <footer class="footer">
+      <p>© 2026 imamah</p>
+    </footer>
   </body>
 </html>
